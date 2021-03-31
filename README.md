@@ -41,4 +41,4 @@
 1.`bash install.sh -u`
 
 
-3. `exit``
+2.restart termux
