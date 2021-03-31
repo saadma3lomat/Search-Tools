@@ -1,17 +1,19 @@
 ![logo](https://github.com/saadma3lomat/Saad-NJ-Termux-Black/blob/main/Saad-NJ.jpg)
 # Saad-NJ-Termux-Black
-#github : https://github.com/saadma3lomat/
-
 
 #youtube : https://www.youtube.com/channel/UCYs_yQNKlr9P3-Gkx7v9voA
 
+#Telegram : https://t.me/joinchat/UKfy4AZaMAB8H_OC0
+
+#github : https://github.com/saadma3lomat/
 
 #Tiktok :  Saad_Linux
 
-### Install TermuXBlacK
-1. Just download installer script `git clone https://github.com/saadma3lomat/Saad-NJ-Termux-Black.git`
-2. use `chmod +x bash saad-NJ.sh`
-3. Now run `bash saad-NJ.sh`
+### Install Saad-NJ-TermuX-BlaCK :)
+
+1.`git clone https://github.com/saadma3lomat/Saad-NJ-Termux-Black.git`
+2.`chmod +x bash saad-NJ.sh`
+3.`bash saad-NJ.sh`
 
 
 ## Inatall Package 
@@ -34,5 +36,5 @@
 11. xerosploit
 
 ## Uninstall
-1. copy & paste whole command `bash install.sh -u`
-2. restart termux `exit``
+1.`bash install.sh -u`
+2. `exit``
