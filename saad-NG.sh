@@ -33,7 +33,7 @@ ila bghiti tms7o :
 ktb =====>  bash install.sh -u
 "
 
-printf "Do you Like Saad-NJ-Termux-Black Custom PS1? [Y/n] "
+printf "Do You Like Saad-NJ-Termux-Black Custom PS1? [Y/n] "
 read ask
 if [[ "$ask" == [Y/y] ]];then
 clear ; ls ; pwd
@@ -50,14 +50,15 @@ Link https://www.youtube.com/channel/UCYs_yQNKlr9P3-Gkx7v9voA
 exit 0
 fi
 echo "[i] Sorry :( "
-printf "Are you want Uninstall Saad-NJ-Termux-Black PS1? [Y/n] "
+printf "Do You Want Uninstall Saad-NJ-Termux-Black PS1? [Y/n] "
 read ask
 if [[ "$ask" == [Y/y] ]];then
 bash install.sh -u
-rm -f $PREFIX/etc/apt/sources.list.d/termuxblack.list && mv $PREFIX/etc/bash.bashrc.bk $PREFIX/etc/bash.bashrc && rm>
+rm -f $PREFIX/etc/apt/sources.list.d/termuxblack.list && mv $PREFIX/etc/bash.bashrc.bk $PREFIX/etc/bash.bashrc && rm -f ~/.termux/colors.properties
 clear ; rm -rif install.sh install.sh.1 install.sh.2 termuxblack.key ; ls ; cat Saad.NJ.txt
 echo "[i] The Saad-NJ-Termux-Black exiting  :("
 echo "[i] Restart termux ..."
 exit 0
 fi
+
 
