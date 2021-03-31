@@ -12,7 +12,9 @@
 ### Install Saad-NJ-TermuX-BlaCK :)
 
 1.`git clone https://github.com/saadma3lomat/Saad-NJ-Termux-Black.git`
+
 2.`chmod +x bash saad-NJ.sh`
+
 3.`bash saad-NJ.sh`
 
 
@@ -37,4 +39,6 @@
 
 ## Uninstall
 1.`bash install.sh -u`
-2. `exit``
+
+
+3. `exit``
