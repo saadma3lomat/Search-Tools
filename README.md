@@ -13,6 +13,6 @@
 
 ### Install Search-Tools :)
 
-1.`git clone https://github.com/saadma3lomat/Search-Tools.git`
-
-2.`bash searching.sh
+`git clone https://github.com/saadma3lomat/Search-Tools.git`
+`cd Search-Tools/`
+`bash searching.sh
