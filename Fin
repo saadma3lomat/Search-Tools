@@ -1,0 +1,7 @@
+for sk in $(cat axt)
+do
+echo $sk > 01 
+break
+done
+
+	
