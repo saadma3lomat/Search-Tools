@@ -1,37 +1,29 @@
 #!/bin/bash
 
-fun_file() {
+fun_fil() {
 if [ -f $t0l/$fBV ]; then
-	fil=y 
+	rm $fBV 
 else
 	fil=n
-fi
-if [[ $fil == y ]]; then
-	rm $fBV
-else
-	echo
 fi
 }
 t0l=`pwd`
 fBV="axt"
-fun_file
+fun_fil
 fBV="a1xt"
-fun_file
+fun_fil
 fBV=01
-fun_file
-fBV=links-number
-fun_file
+fun_fil
 fBV=links
-fun_file
+fun_fil
 
-cat f|grep ')' > jb
+cat 0x1|grep ')' > jb
 IFS=")"
 for ask in $(cat jb)
 do 
 echo $ask  >> jb2
 done
 cat jb2|sort|uniq>links
-cat links -n>links-number
 rm jb jb2
 clear
 
@@ -80,7 +72,7 @@ linkGIT="https://github.com/"
 read -p "Enter Name Tool : >>> " Eye
 
 if [[ $Eye == git ]]; then
-	rm links links-number
+	rm links 
 	git=y
 	echo not use $Eye !
 	exit
@@ -88,11 +80,11 @@ else
 	if [[ $Eye == [0-9-a-z-A-Z-.-:-/] ]]; then
 		if [[ $git == y  ]]; then
 			echo not use $Eye !
-			rm links links-number
+			rm links 
 			exit
 		else
 			echo not found number $Eye use two number or caractres 
-			rm links links-number
+			rm links
 			exit
 		fi
 	else
@@ -103,7 +95,7 @@ else
 	fi
 fi 
 
-rm links links-number
+rm links
 
 
 fun-A() {
