@@ -15,5 +15,9 @@
 ### Install Search-Tools :)
 
 `git clone https://github.com/saadma3lomat/Search-Tools.git`
+
+
 `cd Search-Tools/`
+
+
 `bash searching.sh`
