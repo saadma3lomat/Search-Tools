@@ -1,4 +1,4 @@
-for sk in $(cat axt)
+for sk in $(cat axt1)
 do
 echo $sk > 01 
 break

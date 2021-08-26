@@ -1,20 +1,26 @@
 #!/bin/bash
 
+version="1.3"
 fun_fil() {
 if [ -f $t0l/$fBV ]; then
 	rm $fBV 
 else
-	fil=n
+	sleep 0.1
 fi
 }
+
 t0l=`pwd`
-fBV="axt"
+fBV=axt
 fun_fil
-fBV="a1xt"
+fBV=axt1
 fun_fil
 fBV=01
 fun_fil
-fBV=links
+fBV=lins
+fun_fil
+fBV=jb
+fun_fil
+fBV=jb2
 fun_fil
 
 cat 0x1|grep ')' > jb
@@ -23,573 +29,286 @@ for ask in $(cat jb)
 do 
 echo $ask  >> jb2
 done
-cat jb2|sort|uniq>links
-rm jb jb2
+cat jb2 |sort|uniq > lins
+total=$(wc lins |cut -d ' ' -f2)
+fBV=jb
+fun_fil
+fBV=jb2
+fun_fil
+Re='\e[0;31m' BRe='\e[1;31m' tran='\e[0m' Ca="\e[0;33m" Gr='\e[0;32m' Bl='\e[0;34m' Pu='\e[0;35m' Cy='\e[0;36m'
+Wh='\e[0;37m' BB='\e[1;30m' BG='\033[1;32m' BC='\033[1;33m' BBl='\e[1;34m' BP='\033[1;35m' BCy='\033[1;96m' BWh='\033[1;37m'
+
 clear
-
-Re='\e[0;31m'          # Red 1
-BRe='\e[1;31m'         # bRed 2
-Gr='\e[0;32m'          # Green 3
-Bl='\e[0;34m'          # Blue 4
-Pu='\e[0;35m'          # Purple 5
-Cy='\e[0;36m'          # Cyan 6
-Wh='\e[0;37m'          # Whitee 7
-BB='\e[1;30m'          # BBlack 8
-BG='\033[1;32m'        # BGreen 9
-BC='\033[1;33m'        # BCafe 10
-BBl='\e[1;34m'         # BBlue 11
-BP='\033[1;35m'        # BPurple 12
-BCy='\033[1;96m'       # BCyan 13
-BWh='\033[1;37m'       # BWhite 14
-tran='\e[0m'           # transparent 15
-Ca="\e[0;33m"          # Cafe 16
-Caf="\e[0;33m"
-
-echo -e "          $BC  \ \\\'///    ${BRe}search for tools [!]$tran
+date +%Y-%m-%d
+printf "\n${BWh}Welcome to ${BG}search-tools ${BWh}script ${Gr}V $version ${BWh} \n\n* * * * * * * * * * * * * * * * * * * * *\n*                                       *\n*"
+sleep 0.5
+printf "$Gr Developed by ${BWh}Saad${Gr}-${BWh}NJ                  *\n*                                       *\n*"
+sleep 0.5
+printf " Search For Tools ${BG}[${BRe}!${BG}] ${BBl}Search github${BWh}    *\n*                                       *\n*"
+sleep 0.5
+printf "$BWh 1$total $BBl Top Tool$BWh                        *\n*                                       *\n* ${Gr}Moro${Re}cco${BWh}                               *\n*                                       *\n* * * * * * * * * * * * * * * * * * * * *\n\n"
+sleep 2.5
+clear
+echo -e "V-${BG}$version    $BC  \ \'///    ${BRe}Search For Tools ${BG}[${Re}!${BG}]$tran
            ${BB}/  _  _|                  
-          (\'(${BRe}'${BB}\/${BRe}'${BB})                 
-    ______/(    >(__                  
+1$total ${BRe}T    ${BB}(\'(${BRe}'${BB}\/${BRe}'${BB})    Write Anything
+    ${BB}______/(    >(__                  
    /'-    \ \_${Re}=${BB}__| '\                
-  /       /__( $Ca _____${BB}\   ${Ca}_____${BB}        
- /_ \.____    ${Ca},'      '.'     ',${BB}__   
+  /   ___ /__( $Ca _____${BB}\   ${Ca}_____    
+${BB} /_ \.____    ${Ca},'      '.'     ',${BB}__   
 |    /   _\__${Ca}/${BB}_        ${Ca}-       ${BB}/  \   
-\/      /____  \ ${tran}Search github ${BB}///    
- )     / /   \__\     ${Ca} -        |${BB}   
- '-.__|_/    ///|   ${BG}Example     ${Ca}|${BB} 
+${BB}\/      /____  \ ${BBl}Search github ${BB}///    
+ )     / /   \__\     ${Ca} -        |
+${BB} '-.__|_/   ${BB} ///|   ${BG}Example     ${Ca}|${BB} 
       \_      ${Ca}|        |        |  ${BB}   
-        |     ${Ca}|   ${tran}AI   ${Ca}or   ${tran}ai  ${Ca}|${BB}
+        |  /  ${Ca}|   ${tran}AI   ${Ca}or   ${tran}ai  ${Ca}|${BB}
          \    ${Ca}|        |        |${BB}
          /    ${Ca}|  ${tran}air   ${Ca}or   ${tran}AiR ${Ca}|${BB}
          \    ${Ca}|        |        |${BB}
           \_  ${Ca}|   ${tran}ged  ${Ca}or   ${tran}dDO ${Ca}|${BB}
-            \_${Ca}|        |        |${BB}
-              ${Ca}|  ${BRe}= ${tran}airgeddon${Ca}    |${BB}
-${BG}Example :     ${Ca}|______Sd'Nj______|${tran}
+Search      \_${Ca}|        |        |${BB}
+              ${Ca}|  ${BRe}= ${tran}airgeddon ${BRe}=${Ca}  |${BB}
+${Cy}Example :     ${Ca}|_____Saad'Nj_____|${tran}
 
            ${Gr}websploit   ${Ca}or   ${Gr}web"$BWh
+
 echo
 linkGIT="https://github.com/"
-read -p "Enter Name Tool : >>> " Eye
+printf "${BG}Enter Name Tool : >>> $tran" 
+read Eye
+banB() {
+clear
+echo -e "The tool Name ${BWh}(${Gr}${Eye}${BWh}) [${BRe}!${BWh}] is not here"
+sleep 1
+echo
+echo -e "
+  ${BP} _         _             ${Ca}<_${BWh}Saad${Ca}_${BWh}NJ${Ca}_> 
+ ${BP}_ \}${BP}o      (_)                ${Ca}^|^${BP}
+(_)/<_       _|/' ${Ca}\/            | ${BP}
+   ${BP} (_)     (_)'  ${Ca}_\o_          |"
+echo ------------------------------------------
+sleep 2
+fBV=01
+fun_fil
+fBV=axt1
+fun_fil
+fBV=lins
+fun_fil
+}
 
-if [[ $Eye == git ]]; then
-	rm links 
-	git=y
-	echo not use $Eye !
-	exit
-else
-	if [[ $Eye == [0-9-a-z-A-Z-.-:-/] ]]; then
-		if [[ $git == y  ]]; then
-			echo not use $Eye !
-			rm links 
-			exit
-		else
-			echo not found number $Eye use two number or caractres 
-			rm links
-			exit
-		fi
+if [ $Eye ]; then
+	if [ "$Eye" == "0" ]; then
+		fBV=lins
+		fun_fil
+		exit
+	elif [ $Eye == / -o $Eye == .  -o $Eye == - -o $Eye == _ -o $Eye == m -o $Eye == M -o $Eye == 3 -o $Eye == 6 -o $Eye == 36 ]; then
+		banB
+		bash $0
 	else
-		cat links|grep -i $Eye  >> axt && [[ $? -eq '0' ]] && OoL=y || OoL=n
-		if [[ $OoL == y ]]; then
-			echo $fGY|grep -i $Eye >> axt
-		fi
-	fi
-fi 
-
-rm links
-
+		cat lins|grep -i $Eye > axt1 && [[ $? -eq '0' ]] && OoL=y || OoL=n
+		fBV=lins
+		fun_fil
+	fi 
+else
+	banB
+	bash $0
+fi
 
 fun-A() {
-clear  
-sleep 0.3
-echo -e "${BC}   \|/ ____ \|/
-    @~/ ${BCy},. ${BC}\~@
-   /_( \__/ )_\ 
-      \__${BRe}U${BC}_/"$BWh
-sleep 0.6
+if [ -z $(wc axt1 |cut -d ' ' -f2) ]; then
+	totaL=$(wc axt1 |cut -d ' ' -f3)
+else
+	totaL=$(wc axt1 |cut -d ' ' -f2)
+fi
+BAN=$(($totaL % 2))
+if [ $BAN -eq 0 ]; then 
+	clear  
+	echo -e "${Cy}   \|/ ____ \|/      ${Re}exit ${BG}>> ${Gr}0$Cy
+    @~/ ${BRe}., ${Cy}\~@
+   ${Cy}/_( \__/ )_\     << ${BRe}Saad ${BG}NJ${Cy} >>
+      \__${BRe}U${Cy}_/"$BWh
+      echo
+else
+	clear  
+	#sleep 0.1
+	echo -e "${Gr}   \|/ ____ \|/      ${Gr}Return ${BG}>> ${Re}00${Gr}
+    @~/ ${BRe},. ${Gr}\~@
+   ${Gr}/_( \__/ )_\     << ${BG}Saad ${BRe}NJ${Gr} >>
+      \__${BRe}U${Gr}_/"$BWh
+      echo
+sleep 0.2
 echo
-echo -e "Search For ${BC}${Eye} ${BWh}! ${Cy}N : $sea"
-sleep 0.4
-echo
-echo -e "${Gr}Name  :  ${BG}$NaMe " 
+fi
+
+adb="$linkGIT$(cat 01)"
+XO="url"
+echo -e "${BC}Search For ${BBl}(${BRe}${Eye}${BBl})$BC > ${BBl}{${BP}${totaL}${BBl}}$BC Tool !   ${Cy}N : [${BRe}$sea${Cy}]"
+sleep 0.7
+grep '/' 01 &> /dev/null
+if [ $? -eq 0 ]; then
+	if [ -z $(cat 01 |cut -d '/' -f2) ]; then
+		sleep 0.1
+	else
+		echo
+		echo -e "${Gr}Name"
+		echo -e "${Cy}>>>> ${tran}$NaMe"|grep -i --color=auto ${Eye}
+		if [ $? -eq 0 ]; then
+			sleep 0.3
+			ino=y
+		else
+			echo -e "${Cy}>>>> $BWh$NaMe"
+		fi
+		echo -e "${Gr}Package_Name"
+		echo -e "${Cy}>>>>>>>>>>>> ${tran}$pNaMe"|grep -i --color=auto ${Eye}
+		if [ $? -eq 0 ]; then
+			sleep 0.3
+			imo=y
+		else
+			echo -e "${Cy}>>>>>>>>>>>> $BWh$pNaMe"
+		fi
+	fi
+	if [ -z $(cat 01 |cut -d '/' -f3) ]; then
+		sleep 0.1
+	else
+		dj=$(cat 01 |cut -d '/' -f3)
+		echo -e "${Gr}Package"
+		echo -e "${Cy}>>>>>>> ${tran}$dj"|grep -i --color=auto $Eye
+		if [ $? -eq 0 ]; then
+			sleep 0.3
+		else
+			echo -e "${Cy}>>>>>>> $BWh$dj"
+			sleep 0.3
+		fi
+	fi
+	if [ -z $(cat 01 |cut -d '/' -f4) ]; then
+		sleep 0.1
+	else
+		echo -e "${Gr}Tool"
+		dj=$(cat 01 |cut -d '/' -f4)
+		echo -e "${Cy}>>>> ${tran}$dj"|grep -i --color=auto $Eye
+		if [ $? -eq 0 ]; then
+			sleep 0.3
+		else
+			echo -e "${Cy}>>>> $BWh$dj"
+			sleep 0.3
+		fi
+	fi
+	if [ -z $(cat 01 |cut -d '/' -f5) ]; then
+		sleep 0.1
+	else
+		echo -e "${Gr}name"
+		dj=$(cat 01 |cut -d '/' -f5)
+		echo -e "${Cy}>>>> ${tran}$dj"|grep -i --color=auto $Eye
+		if [ $? -eq 0 ]; then
+			sleep 0.3
+		else
+			echo -e "${Cy}>>>>>>> $BWh$dj"
+			sleep 0.3
+		fi
+	fi
+else
+	echo
+	echo -e "${Gr}Name"
+	echo -e "${Cy}>>>> ${tran}$NaMe"|grep -i --color=auto $Eye
+	sleep 0.3
+	echo
+fi	
+
+echo -e $Gr$XO
+echo -e "${Cy}>>> $BWh$adb.git"
 sleep 0.3
 echo
-echo -e "${Gr}Package_Name  :  ${BCy}$pNaMe "
-sleep 0.3
-XO="url  :  " 
-echo 
-adb=$linkGIT$(cat 01)
-sds=$(cat 01)
-echo -e ${Gr}${XO}${Cy}$adb${BWh}
-sleep 0.3
-echo
-printf "wach hiya hadi  [${Gr}y${BWh}/${BRe}n${BWh}]${BWh} : >>> " 
+
+printf "${BWh}[${Re}!${BWh}]-${BG}Is this tool ? ${BWh}[${Gr}y${BWh}/${BRe}n${BWh}]$BG : >>> ${tran}" 
 read ask
 }
 
 FUN_a() {
 echo 
-printf "Wach Baghi Tbtha [${Gr}y${BWh}/${BRe}n${BWh}]${BWh} : >>> "
+printf "${BWh}[${Re}!${BWh}]-${BG}Do you want to install it ? ${BWh}[${Gr}y${BWh}/${BRe}n${BWh}]$BG : >>> ${tran}"
 read ask
-echo -e ${tran}
 if [[ $ask == [y/Y] ]]; then
-	echo pleas what
-	sleep 1.5
-	gcol=`git clone https://github.com/$sds`
-	echo The Tool $NaMe instaled
-	rm 01 axt
-	exit
+	echo please wait ...
+	sleep 1
+	cd ..
+	gcol=`git clone $adb.git`
+	if [ $? == 0 ]; then
+		echo "The Tool $NaMe instaled :)"
+		cd Search-Tools
+		fBV=01
+		fun_fil
+		fBV=axt1
+		fun_fil
+		cd .. ; ls
+		exit
+	else
+		sleep 1
+		printf "\n($NaMe) Tool is not install :(\n\nCheck your connention to the internet!!\n"
+		cd Search-Tools
+		fBV=01
+		fun_fil
+		fBV=axt1
+		fun_fil
+		exit
+	fi
 else
-	echo bye
-	rm 01 axt
+	echo Exit ...
+	fBV=01
+	fun_fil
+	fBV=axt1
+	fun_fil
+	sleep 2
 fi 
+}
+
+sea=0
+funt() {
+pNaMe=$(cat 01|cut -d / -f1) NaMe=$(cat 01|cut -d / -f2) pNaM=$(cat 01|cut -d / -f3) sea=$(($sea+1))
+fun-A
+}
+
+funt1() {
+cat axt1|grep -v $(cat 01) > axt 
+if [ $? -eq '0' ]; then
+	fBV=01
+	fun_fil
+	fBV=axt1
+	fun_fil
+	mv axt axt1
+	bash Fin
+	
+else
+	banB
+fi
 }
 
 if [[ $OoL == y  ]]; then
 	bash Fin
+	while :
+	do
 	if [ -f $t0l/01 ]; then
-		NaMe=`grep -i $Eye 01|cut -d / -f2|cut -d . -f1`
-		pNaMe=`grep -i $Eye 01|cut -d / -f1`
-		sea=1
-		fun-A
-		if [[ $ask == [y/Y] ]]; then
-			FUN_a
-		else
-			cat axt|grep -v $(cat 01) > a1xt && [[ $? -eq '0' ]] && OoL=y || OoL=n
-			if [[ $OoL == y  ]]; then
-				rm axt 01
-				mv a1xt axt
-				bash Fin
-				if [ -f $t0l/01 ]; then
-					NaMe=`grep -i $Eye 01|cut -d / -f2|cut -d . -f1`
-					pNaMe=`grep -i $Eye 01|cut -d / -f1`
-					sea=2
-					fun-A
-					if [[ $ask == [y/Y] ]]; then
-						FUN_a 
-					else
-						cat axt|grep -v $(cat 01) > a1xt && [[ $? -eq '0' ]] && OoL=y || OoL=n
-						if [[ $OoL == y  ]]; then
-							rm axt 01
-							mv a1xt axt
-							bash Fin
-							if [ -f $t0l/01 ]; then
-								NaMe=`grep -i $Eye 01|cut -d / -f2|cut -d . -f1`
-								pNaMe=`grep -i $Eye 01|cut -d / -f1`
-								sea=3
-								fun-A
-								if [[ $ask == [y/Y] ]]; then
-									FUN_a 
-								else
-									cat axt|grep -v $(cat 01) > a1xt && [[ $? -eq '0' ]] && OoL=y || OoL=n
-									if [[ $OoL == y  ]]; then
-										rm axt 01
-										mv a1xt axt
-										bash Fin
-										if [ -f $t0l/01 ]; then	
-											NaMe=`grep -i $Eye 01|cut -d / -f2|cut -d . -f1`
-											pNaMe=`grep -i $Eye 01|cut -d / -f1`
-											sea=4
-											fun-A
-											if [[ $ask == [y/Y] ]]; then
-												FUN_a 
-											else
-												cat axt|grep -v $(cat 01) > a1xt && [[ $? -eq '0' ]] && OoL=y || OoL=n
-												if [[ $OoL == y  ]]; then
-													rm axt 01
-													mv a1xt axt
-													bash Fin
-													if [ -f $t0l/01 ]; then
-														NaMe=`grep -i $Eye 01|cut -d / -f2|cut -d . -f1`
-														pNaMe=`grep -i $Eye 01|cut -d / -f1`
-														sea=5
-														fun-A
-														if [[ $ask == [y/Y] ]]; then
-															FUN_a
-														else
-															cat axt|grep -v $(cat 01) > a1xt && [[ $? -eq '0' ]] && OoL=y || OoL=n
-															if [[ $OoL == y  ]]; then
-																rm axt 01
-																mv a1xt axt
-																bash Fin
-																if [ -f $t0l/01 ]; then
-																	NaMe=`grep -i $Eye 01|cut -d / -f2|cut -d . -f1`
-																	pNaMe=`grep -i $Eye 01|cut -d / -f1`
-																	sea=6
-																	fun-A
-																	if [[ $ask == [y/Y] ]]; then
-																		FUN_a
-																	else
-																		cat axt|grep -v $(cat 01) > a1xt && [[ $? -eq '0' ]] && OoL=y || OoL=n
-																		if [[ $OoL == y  ]]; then
-																			rm axt 01
-																			mv a1xt axt
-																			bash Fin
-																			if [ -f $t0l/01 ]; then
-																				NaMe=`grep -i $Eye 01|cut -d / -f2|cut -d . -f1`
-																				pNaMe=`grep -i $Eye 01|cut -d / -f1`
-																				sea=7
-																				fun-A
-																				if [[ $ask == [y/Y] ]]; then
-																					FUN_a
-																				else
-																					cat axt|grep -v $(cat 01) > a1xt && [[ $? -eq '0' ]] && OoL=y || OoL=n
-																					if [[ $OoL == y  ]]; then
-																						rm axt 01
-																						mv a1xt axt
-																						bash Fin
-																						if [ -f $t0l/01 ]; then
-																							NaMe=`grep -i $Eye 01|cut -d / -f2|cut -d . -f1`
-																							pNaMe=`grep -i $Eye 01|cut -d / -f1`
-																							sea=8
-																							fun-A
-																							if [[ $ask == [y/Y] ]]; then
-																								FUN_a
-																							else
-																								cat axt|grep -v $(cat 01) > a1xt && [[ $? -eq '0' ]] && OoL=y || OoL=n
-																								if [[ $OoL == y  ]]; then
-																									rm axt 01
-																									mv a1xt axt
-																									bash Fin
-																									if [ -f $t0l/01 ]; then
-																										NaMe=`grep -i $Eye 01|cut -d / -f2|cut -d . -f1`
-																										pNaMe=`grep -i $Eye 01|cut -d / -f1`
-																										sea=9
-																										fun-A
-																										if [[ $ask == [y/Y] ]]; then
-																											FUN_a
-																										else
-																											cat axt|grep -v $(cat 01) > a1xt && [[ $? -eq '0' ]] && OoL=y || OoL=n
-																											if [[ $OoL == y  ]]; then
-																												rm axt 01
-																												mv a1xt axt
-																												bash Fin
-																												if [ -f $t0l/01 ]; then
-																													NaMe=`grep -i $Eye 01|cut -d / -f2|cut -d . -f1`
-																													pNaMe=`grep -i $Eye 01|cut -d / -f1`									
-																													sea=10
-																													fun-A
-																													if [[ $ask == [y/Y] ]]; then
-																														FUN_a
-																													else
-																														cat axt|grep -v $(cat 01) > a1xt && [[ $? -eq '0' ]] && OoL=y || OoL=n
-																														if [[ $OoL == y  ]]; then
-																															rm axt 01
-																															mv a1xt axt
-																															bash Fin
-																															if [ -f $t0l/01 ]; then
-																																NaMe=`grep -i $Eye 01|cut -d / -f2|cut -d . -f1`
-																																pNaMe=`grep -i $Eye 01|cut -d / -f1`
-																																sea=11
-																																fun-A
-																																if [[ $ask == [y/Y] ]]; then
-																																	FUN_a
-																																else
-																																	cat axt|grep -v $(cat 01) > a1xt && [[ $? -eq '0' ]] && OoL=y || OoL=n
-																																	if [[ $OoL == y  ]]; then
-																																		rm axt 01
-																																		mv a1xt axt
-																																		bash Fin
-																																		if [ -f $t0l/01 ]; then
-																																			NaMe=`grep -i $Eye 01|cut -d / -f2|cut -d . -f1`
-																																			pNaMe=`grep -i $Eye 01|cut -d / -f1`
-																																			sea=12
-																																			fun-A
-																																			if [[ $ask == [y/Y] ]]; then
-																																				FUN_a
-																																			else
-																																				cat axt|grep -v $(cat 01) > a1xt && [[ $? -eq '0' ]] && OoL=y || OoL=n
-																																				if [[ $OoL == y  ]]; then
-																																					rm axt 01
-																																					mv a1xt axt
-																																					bash Fin
-																																					if [ -f $t0l/01 ]; then
-																																						NaMe=`grep -i $Eye 01|cut -d / -f2|cut -d . -f1`
-																																						pNaMe=`grep -i $Eye 01|cut -d / -f1`
-																																						sea=13
-																																						fun-A
-																																						if [[ $ask == [y/Y] ]]; then
-																																							FUN_a
-																																						else
-																																							cat axt|grep -v $(cat 01) > a1xt && [[ $? -eq '0' ]] && OoL=y || OoL=n
-																																							if [[ $OoL == y  ]]; then
-																																								rm axt 01
-																																								mv a1xt axt
-																																								bash Fin
-																																								if [ -f $t0l/01 ]; then
-																																									NaMe=`grep -i $Eye 01|cut -d / -f2|cut -d . -f1`
-																																									pNaMe=`grep -i $Eye 01|cut -d / -f1`
-																																									sea=14
-																																									fun-A
-																																									if [[ $ask == [y/Y] ]]; then
-																																										FUN_a
-																																									else
-																																										cat axt|grep -v $(cat 01) > a1xt && [[ $? -eq '0' ]] && OoL=y || OoL=n
-																																										if [[ $OoL == y  ]]; then
-																																											rm axt 01
-																																											mv a1xt axt
-																																											bash Fin
-																																											if [ -f $t0l/01 ]; then
-																																												NaMe=`grep -i $Eye 01|cut -d / -f2|cut -d . -f1`
-																																												pNaMe=`grep -i $Eye 01|cut -d / -f1`
-																																												sea=15
-																																												fun-A
-																																												if [[ $ask == [y/Y] ]]; then
-																																													FUN_a
-																																												else
-																																													cat axt|grep -v $(cat 01) > a1xt && [[ $? -eq '0' ]] && OoL=y || OoL=n
-																																													if [[ $OoL == y  ]]; then
-																																														rm axt 01
-																																														mv a1xt axt
-																																														bash Fin
-																																														if [ -f $t0l/01 ]; then
-																																															NaMe=`grep -i $Eye 01|cut -d / -f2|cut -d . -f1`
-																																															pNaMe=`grep -i $Eye 01|cut -d / -f1`
-																																															sea=16
-																																																fun-A
-																																															if [[ $ask == [y/Y] ]]; then
-																																																FUN_a
-																																															else
-																																																cat axt|grep -v $(cat 01) > a1xt && [[ $? -eq '0' ]] && OoL=y || OoL=n
-																																																if [[ $OoL == y  ]]; then
-																																																	rm axt 01
-																																																	mv a1xt axt
-																																																	bash Fin
-																																																	if [ -f $t0l/01 ]; then
-																																																		NaMe=`grep -i $Eye 01|cut -d / -f2|cut -d . -f1`
-																																																		pNaMe=`grep -i $Eye 01|cut -d / -f1`
-																																																		sea=17
-																																																		fun-A
-																																																		if [[ $ask == [y/Y] ]]; then
-																																																			FUN_a
-																																																		else
-																																																			cat axt|grep -v $(cat 01) > a1xt && [[ $? -eq '0' ]] && OoL=y || OoL=n
-																																																			if [[ $OoL == y  ]]; then
-																																																				rm axt 01
-																																																				mv a1xt axt
-																																																				bash Fin
-																																																				if [ -f $t0l/01 ]; then
-																																																					NaMe=`grep -i $Eye 01|cut -d / -f2|cut -d . -f1`
-																																																					pNaMe=`grep -i $Eye 01|cut -d / -f1`
-																																																					sea=18
-																																																					fun-A
-																																																					if [[ $ask == [y/Y] ]]; then
-																																																						FUN_a
-																																																					else
-																																																						cat axt|grep -v $(cat 01) > a1xt && [[ $? -eq '0' ]] && OoL=y || OoL=n
-																																																						if [[ $OoL == y  ]]; then
-																																																							rm axt 01
-																																																							mv a1xt axt
-																																																							bash Fin
-																																																							if [ -f $t0l/01 ]; then
-																																																								NaMe=`grep -i $Eye 01|cut -d / -f2|cut -d . -f1`
-																																																								pNaMe=`grep -i $Eye 01|cut -d / -f1`
-																																																								sea=19
-																																																								fun-A
-																																																								if [[ $ask == [y/Y] ]]; then
-																																																									FUN_a
-																																																								else
-																																																									cat axt|grep -v $(cat 01) > a1xt && [[ $? -eq '0' ]] && OoL=y || OoL=n
-																																																									if [[ $OoL == y  ]]; then
-																																																										rm axt 01
-																																																										mv a1xt axt
-																																																										bash Fin
-																																																										if [ -f $t0l/01 ]; then
-																																																											NaMe=`grep -i $Eye 01|cut -d / -f2|cut -d . -f1`
-																																																											pNaMe=`grep -i $Eye 01|cut -d / -f1`
-																																																											sea=20
-																																																											fun-A
-																																																											if [[ $ask == [y/Y] ]]; then
-																																																												FUN_a
-																																																											else
-																																																												echo "The tool Name >> $Eye [!] is not here :("
-																																																												rm axt 01
-																																																											fi
-																																																										else
-																																																											echo "The tool Name >> $Eye [!] is not here 39"
-																																																											rm axt 01
-																																																										fi
-																																																									else
-																																																										echo "The tool Name >> $Eye [!] is not here :("
-																																																										rm axt 01 a1xt
-																																																									fi															
-																																																								fi
-																																																							else
-																																																								echo "The tool Name >> $Eye [!] is not here 37"
-																																																								rm axt 01
-																																																							fi
-																																																						else
-																																																							echo "The tool Name >> $Eye [!] is not here 36"
-																																																							rm axt 01 a1xt
-																																																						fi
-																																																					fi
-																																																				else
-																																																					echo "The tool Name >> $Eye [!] is not here 35"
-																																																					rm axt 01
-																																																				fi
-																																																			else
-																																																				echo "The tool Name >> $Eye [!] is not here :("
-																																																				rm axt 01 a1xt
-																																																			fi
-																																																		fi
-																																																	else
-																																																		echo "The tool Name >> $Eye [!] is not here 33"
-																																																		rm axt 01
-																																																	fi
-																																																else
-																																																	echo "The tool Name >> $Eye [!] is not here 32"
-																																																	rm axt 01 a1xt
-																																																fi
-																																															fi
-																																														else
-																																															echo "The tool Name >> $Eye [!] is not here 31"
-																																															rm axt 01
-																																														fi
-																																													else
-																																														echo "The tool Name >> $Eye [!] is not here 30"
-																																														rm axt 01 a1xt
-																																													fi
-																																												fi
-																																											else
-																																												echo "The tool Name >> $Eye [!] is not here 29"
-																																												rm axt 01
-																																											fi
-																																										else
-																																											echo "The tool Name >> $Eye [!] is not here 28"
-																																											rm axt 01 a1xt
-																																										fi
-																																									fi
-																																								else
-																																									echo "The tool Name >> $Eye [!] is not here 27"
-																																									rm axt 01 
-																																								fi
-																																							else
-																																								echo "The tool Name >> $Eye [!] is not here 26"
-																																								rm axt 01 a1xt
-																																							fi
-																																						fi
-																																					else
-																																						echo "The tool Name >> $Eye [!] is not here 25"
-																																						rm axt 01 a1xt 
-																																					fi
-																																				else
-																																					echo "The tool Name >> $Eye [!] is not here :("
-																																					rm axt 01 a1xt
-																																				fi			
-																																			fi
-																																		else
-																																			echo "The tool Name >> $Eye [!] is not here 23"
-																																			rm axt 01 a1xt
-																																		fi
-																																	else
-																																		echo "The tool Name >> $Eye [!] is not here 22"
-																																		rm axt 01 a1xt
-																																	fi								
-																																fi
-																															else
-																																echo "The tool Name >> $Eye [!] is not here 21"
-																																rm axt 01 a1xt
-																															fi
-																														else
-																															echo "The tool Name >> $Eye [!] is not here :("
-																															rm axt 01 a1xt
-																														fi
-																													fi
-																												else
-																													echo "The tool Name >> $Eye [!] is not here 19"
-																													rm axt 01 a1xt
-																												fi							
-																											else
-																												echo "The tool Name >> $Eye [!] is not here 18"
-																												rm axt 01 a1xt
-																											fi				
-																										fi							
-																									else
-																										echo "The tool Name >> $Eye [!] is not here 17"
-																										rm axt 01 a1xt													
-																									fi
-																								else
-																									echo "The tool Name >> $Eye [!] is not here :("
-																									rm axt 01 a1xt
-																								fi
-																							fi
-																						else
-																							echo "The tool Name >> $Eye [!] is not here 15"
-																							rm axt 01 a1xt
-																						fi
-																					else
-																						echo "The tool Name >> $Eye [!] is not here 14"
-																						rm axt 01 a1xt
-																					fi			
-																						
-																				fi
-																			else
-																				echo "The tool Name >> $Eye [!] is not here 13"
-																				rm axt 01 a1xt
-																			fi   					 																			
-																		else
-																			echo "The tool Name >> $Eye [!] is not here :("
-																			rm axt 01 a1xt
-																		fi   					 																			
-																	fi
-																else
-																	echo "The tool Name >> $Eye [!] is not here 11"
-																	rm axt 01 a1xt
-																fi	
-															else
-																echo "The tool Name >> $Eye [!] is not here :("
-																rm axt 01 a1xt
-															fi
-														fi
-										 			else
-														echo "The tool Name >> $Eye [!] is not here 9"
-														rm axt 01 a1xt
-													fi		
-												else
-													echo "The tool Name >> $Eye [!] is not here :("
-													rm axt 01 a1xt
-												fi
-												
-											fi 	
-
-										else
-											echo "The tool Name >> $Eye [!] is not here 7"
-											rm axt 01 a1xt
-										fi
-									else
-										echo "The tool Name >> $Eye [!] is not here"
-										rm axt 01 a1xt
-									fi
-								fi		
-							else
-								echo "The tool Name >> $Eye [!] is not here 5"
-								rm axt 01 a1xt
-							fi
-						else
-							echo "The tool Name >> $Eye [!] is not here :("
-							rm axt 01 a1xt
-						fi
-					fi
-				else
-					echo "The tool Name >> $Eye [!] is not here 3"
-					rm axt 01 a1xt
-				fi
-			else
-				echo "The tool Name >> $Eye [!] is not here :("
-				rm axt 01 a1xt
-			fi
-		fi 
+    		funt
+    		if [[ $ask == [y/Y] ]]; then
+    			FUN_a
+    		elif [ "$ask" == "00" ]; then
+    			bash $0
+    		elif [ "$ask" == "0" ]; then
+    			fBV=01
+			fun_fil
+			fBV=axt1
+			fun_fil
+    			fBV=lins
+			fun_fil
+    			exit
+    		else
+    	        	funt1
+		fi
 	else
-		echo "The tool Name >> $Eye [!] is not here 1"
-		rm axt
+		sleep 2
+		bash $0
 	fi
+	done
 else
-	echo "The tool Name $Eye [!] is not here"
-	sleep 1
-		echo -e "
-   _         _             <_Saad-NJ_> 
- _ \}o      (_)                ^|^
-(_)/<_       _|/' \/            | 
-    (_)     (_)'  _\o_          |"
-	rm axt
+	banB
+	bash $0
 fi
-
